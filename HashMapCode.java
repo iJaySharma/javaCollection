@@ -56,6 +56,8 @@ int di = searchInLL(key,bi);
 if(di==-1)
 {
 buckets[bi].add(new Node(key,value));
+n++;
+
 }
 else 
 {
@@ -72,27 +74,72 @@ System.out.print("rehashing");
 
 public boolean containsKey(K key)
 {
+int bi = hashFunction(key);
+int di = searchInLL(key,bi);
+
+if(di==-1)
+{
 return false;
+}
+else 
+{
+return true;
+}
+
 }
 
 public V remove(K key)
 {
+int bi = hashFunction(key);
+int di = searchInLL(key,bi);
+
+if(di==-1)
+{
 return null;
+}
+else 
+{
+Node node = buckets[bi].remove(di);
+return node.value;
+}
+
 }
 
 public V get(K key)
 {
-return  null;
+int bi = hashFunction(key);
+int di = searchInLL(key,bi);
+
+if(di==-1)
+{
+return null;
+}
+else 
+{
+Node node = buckets[bi].get(di);
+return node.value;
+}
+
 }
 
 public ArrayList<K> KeySet()
 {
-return null;
+ArrayList<K> list = new ArrayList<>();
+for(int i=0; i<buckets.length; i++) // bi
+{
+LinkedList<Node> ll = buckets[i];
+for(int j=0; j<ll.size();j++) // di
+{
+Node node = ll.get(j);
+list.add(node.key);
+} 
+}
+return list;
 }
 
 public boolean isEmpty()
 {
-return false;
+return n==0;
 }
 
 }
@@ -104,5 +151,13 @@ HashMap<String,Integer> map = new HashMap<>();
 map.put("india",190);
 map.put("china",200);
 map.put("america",150);
+System.out.println(map.containsKey("china"));
+System.out.println(map.get("america"));
+System.out.println(map.isEmpty());
+System.out.println(map.remove("india"));
+for(String g: map.KeySet())
+{
+System.out.print(g);
+}
 }
 }

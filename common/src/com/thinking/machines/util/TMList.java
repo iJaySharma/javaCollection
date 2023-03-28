@@ -1,3 +1,4 @@
+//common list interface for arraylist and linked list
 package com.thinking.machines.util;
 public interface TMList<T>
 {

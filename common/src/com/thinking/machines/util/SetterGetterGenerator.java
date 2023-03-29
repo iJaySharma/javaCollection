@@ -76,7 +76,7 @@ line="return this."+fieldName+";";
 list.add(line);
 list.add("}");
 }
-File file=new File("tmp.tmp");
+File file=new File("settergetter.tmp");
 if(file.exists()) file.delete();
 RandomAccessFile randomAccessFile;
 randomAccessFile=new RandomAccessFile(file,"rw"); 
@@ -87,7 +87,7 @@ line=iterator.next();
 randomAccessFile.writeBytes(line+"\r\n");
 }
 randomAccessFile.close();
-System.out.println("setter/getter for :"+c.getName()+"generated in file named as tmp.tmp");
+System.out.println("setter/getter for :"+c.getName()+"generated in file named as settergetter.tmp");
 }catch(ClassNotFoundException classNotFoundException)
 {
 System.out.println("unable to load class, classpath missing");

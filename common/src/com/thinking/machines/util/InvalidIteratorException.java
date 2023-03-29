@@ -1,3 +1,4 @@
+//InvalidIteratorException
 package com.thinking.machines.util;
 public class InvalidIteratorException extends RuntimeException
 {

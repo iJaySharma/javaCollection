@@ -1,3 +1,4 @@
+//SetterGetterGenerator
 package com.thinking.machines.util;
 import java.lang.reflect.*;
 import java.io.*;

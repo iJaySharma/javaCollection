@@ -1,3 +1,4 @@
+//TMIterator
 package com.thinking.machines.util;
 public interface TMIterator<T>
 {

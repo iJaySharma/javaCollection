@@ -1,3 +1,4 @@
+// TMListItemAcceptor
 package com.thinking.machines.util;
 public interface TMListItemAcceptor<T>
 {

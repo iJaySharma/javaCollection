@@ -1,4 +1,5 @@
- import com.thinking.machines.util.*;
+//KeyBoardTestCase
+import com.thinking.machines.util.*;
 class KeyboardTestCase
 {
 public static void main(String gg[])

@@ -1,3 +1,4 @@
+//lamda testcase
 import com.thinking.machines.util.*;
 class TMLambdaTestCase
 {

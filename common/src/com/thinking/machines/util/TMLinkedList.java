@@ -1,5 +1,6 @@
 // TMLinkedList
 package com.thinking.machines.util;
+import com.thinking.machines.util.InvalidIteratorException;
 public class TMLinkedList<T> implements TMList<T>
 {
 class Node<T>

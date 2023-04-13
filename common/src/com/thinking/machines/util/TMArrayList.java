@@ -1,5 +1,6 @@
 //TMArrayList
 package com.thinking.machines.util;
+import com.thinking.machines.util.InvalidIteratorException;
 public class TMArrayList<T> implements TMList<T>
 {
 private Object collection[];
@@ -82,7 +83,7 @@ int ep=this.size-2;
 T data=(T)this.collection[index];
 for(int e=index;e<=ep;e++)
 {
-this.collection[e-1]=this.collection[e];
+this.collection[e]=this.collection[e+1];
 }
 this.size--;
 return data;
